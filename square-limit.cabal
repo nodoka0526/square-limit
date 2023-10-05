@@ -26,6 +26,7 @@ source-repository head
 library
   exposed-modules:
       Lib
+      SquareLimit
   other-modules:
       Paths_square_limit
   hs-source-dirs:
