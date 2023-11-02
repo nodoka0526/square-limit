@@ -16,6 +16,15 @@ data Frame = Frame
     }
 type Painter = Frame -> G.Picture
 
+flipV :: Painter -> Painter
+flipV = transformPainter (0,1) (1,1) (0,0)
+
+flipH :: Painter -> Painter
+flipH = transformPainter (1,0) (0,0) (1,1)
+
+rotL :: Painter -> Painter
+rotL = transformPainter (1,0) (1,1) (0,0)
+
 wave :: Painter
 wave = segmentsToPainter 20 20
     [[(0,13),(3,8),(6,12),(7,11),(5,0)],[(8,0),(10,6),(12,0)],
@@ -36,3 +45,13 @@ frameCoordMap :: Frame -> (G.Vector -> G.Vector)
 frameCoordMap frame (x,y) 
     = frame.origin G.+ x G.* frame.edge0 G.+ y G.* frame.edge1
 
+transformPainter :: G.Vector -> G.Vector -> G.Vector -> Painter -> Painter
+transformPainter o e0 e1 painter frame
+    = painter frame'
+    where
+        m = frameCoordMap frame
+        frame' = frame 
+               { origin = m o
+               , edge0  = m e0 G.- m o
+               , edge1  = m e1 G.- m o
+               }
