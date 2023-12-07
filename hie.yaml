@@ -1,0 +1,13 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "square-limit:lib"
+
+    - path: "./app/Main.hs"
+      component: "square-limit:exe:square-limit-exe"
+
+    - path: "./app/Paths_square_limit.hs"
+      component: "square-limit:exe:square-limit-exe"
+
+    - path: "./test"
+      component: "square-limit:test:square-limit-test"
