@@ -16,6 +16,9 @@ data Frame = Frame
     }
 type Painter = Frame -> G.Picture
 
+blank :: Painter
+blank = const G.blank
+
 flipV :: Painter -> Painter
 flipV = transformPainter (0,1) (1,1) (0,0)
 
