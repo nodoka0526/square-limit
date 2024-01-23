@@ -7,7 +7,7 @@ import Wave
 import Fish
 
 main :: IO ()
-main = display FullScreen white (square 2 frame0)
+main = display FullScreen white (wave frame0)
 
 frame0 :: Frame
 -- frame0 = Frame (-200, -200) (200, -200) (-200, 200)
