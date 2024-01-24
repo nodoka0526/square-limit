@@ -29,13 +29,13 @@ fish = segmentsToPainter 80 80
 rot45 :: Painter -> Painter
 rot45 = transformPainter (0.5,0.5) (1,1) (0,1)
 
-fish2,fishq,u,t :: Painter
+fish2,fishq,fish4,fish3 :: Painter
 fish2 = flipH (rot45 fish)
 fishq = (fish2 <> rotL fish2)
   <> (rotL (rotL fish2) <> rotL (rotL (rotL fish2)))
-u = (fish2 <> rotL fish2)
+fish4 = (fish2 <> rotL fish2)
   <> (rotL (rotL fish2) <> rotL (rotL (rotL fish2)))
-t = fish <> (fish2 <> rotL (rotL (rotL fish2)))
+fish3 = fish <> (fish2 <> rotL (rotL (rotL fish2)))
 
 nonet :: Painter -> Painter -> Painter -> Painter -> Painter -> 
          Painter -> Painter -> Painter -> Painter -> Painter        --p q r
@@ -46,14 +46,14 @@ nonet p q r s t u v w x =                                           --s t u
 square, corner, side :: Int -> Painter
 square n =
   nonet (corner n) (side n) (rotL (rotL (rotL (corner n))))
-        (rotL (side n)) u (rotL (rotL (rotL (side n))))
+        (rotL (side n)) fish4 (rotL (rotL (rotL (side n))))
         (rotL (corner n)) (rotL (rotL (side n))) (rotL (rotL (corner n)))
 
 quartet :: Painter -> Painter -> Painter -> Painter -> Painter
 quartet p q r s = (p <-> q) </> (r <-> s)
 
 corner 0 = blank
-corner (n+1) = quartet (corner n) (side n) (rotL (side n)) u
+corner (n+1) = quartet (corner n) (side n) (rotL (side n)) fish4
 
 side 0 = blank
-side (n+1) = quartet (side n) (side n) (rotL t) t
+side (n+1) = quartet (side n) (side n) (rotL fish3) fish3
