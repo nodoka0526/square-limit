@@ -27,7 +27,7 @@ theme: default
 ---
 <figure style="text-align: center;">
     <img src="04wave4.png" width="560"><br>
-    <caption>手を振る人(wave2 </> wave2)</caption>
+    <caption>手を振る人(wave2 &lt;/&gt; wave2)</caption>
 </figure>
 
 ---
