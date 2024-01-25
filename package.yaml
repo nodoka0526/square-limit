@@ -1,5 +1,5 @@
 name:                square-limit
-version:             0.1.0.0
+version:             0.2.0.0
 github:              "nodoka0526/square-limit"
 license:             BSD3
 author:              "nodoka"
@@ -49,63 +49,11 @@ executables:
     dependencies:
     - square-limit
 
-  wave0:
-    main:                wave0.hs
-    source-dirs:         app/wave
+  demo:
+    main:            Main.hs
+    source-dirs:     app/demo
     ghc-options:
-    - -threaded
     - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - square-limit
-
-  fliph:
-    main:                fliph.hs
-    source-dirs:         app/wave
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - square-limit
-
-  flipv:
-    main:                flipv.hs
-    source-dirs:         app/wave
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - square-limit
-
-  twin:
-    main:                twin.hs
-    source-dirs:         app/wave
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - square-limit
-
-  twinh:
-    main:                twinh.hs
-    source-dirs:         app/wave
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - square-limit
-
-  twinv:
-    main:                twinv.hs
-    source-dirs:         app/wave
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
     dependencies:
     - square-limit
 

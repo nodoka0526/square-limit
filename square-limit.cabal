@@ -5,7 +5,7 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           square-limit
-version:        0.1.0.0
+version:        0.2.0.0
 description:    Please see the README on GitHub at <https://github.com/nodoka0526/square-limit#readme>
 homepage:       https://github.com/nodoka0526/square-limit#readme
 bug-reports:    https://github.com/nodoka0526/square-limit/issues
@@ -40,28 +40,13 @@ library
     , gloss
   default-language: GHC2021
 
-executable fliph
-  main-is: fliph.hs
+executable demo
+  main-is: Main.hs
   other-modules:
-      Main
       Paths_square_limit
   hs-source-dirs:
-      app/wave
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , gloss
-    , square-limit
-  default-language: GHC2021
-
-executable flipv
-  main-is: flipv.hs
-  other-modules:
-      Main
-      Paths_square_limit
-  hs-source-dirs:
-      app/wave
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+      app/demo
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -rtsopts
   build-depends:
       base >=4.7 && <5
     , gloss
@@ -74,62 +59,6 @@ executable square-limit
       Paths_square_limit
   hs-source-dirs:
       app
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , gloss
-    , square-limit
-  default-language: GHC2021
-
-executable twin
-  main-is: twin.hs
-  other-modules:
-      Main
-      Paths_square_limit
-  hs-source-dirs:
-      app/wave
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , gloss
-    , square-limit
-  default-language: GHC2021
-
-executable twinh
-  main-is: twinh.hs
-  other-modules:
-      Main
-      Paths_square_limit
-  hs-source-dirs:
-      app/wave
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , gloss
-    , square-limit
-  default-language: GHC2021
-
-executable twinv
-  main-is: twinv.hs
-  other-modules:
-      Main
-      Paths_square_limit
-  hs-source-dirs:
-      app/wave
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , gloss
-    , square-limit
-  default-language: GHC2021
-
-executable wave0
-  main-is: wave0.hs
-  other-modules:
-      Main
-      Paths_square_limit
-  hs-source-dirs:
-      app/wave
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
