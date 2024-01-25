@@ -15,43 +15,43 @@ theme: default
 ---
 <figure style="text-align: center;">
     <img src="00wave.png" width="560"><br>
-    <caption>手を振る人</caption>
+    <caption>手を振る人(wave)</caption>
 </figure>
 
 ---
 <figure style="text-align: center;">
     <img src="03wave2.png" width="560"><br>
-    <caption>手を振る人</caption>
+    <caption>手を振る人(wave <-> flipV wave)</caption>
 </figure>
 
 ---
 <figure style="text-align: center;">
     <img src="04wave4.png" width="560"><br>
-    <caption>手を振る人</caption>
+    <caption>手を振る人(wave2 </> wave2)</caption>
 </figure>
 
 ---
 <figure style="text-align: center;">
     <img src="06upSplits.png" width="560"><br>
-    <caption>手を振る人</caption>
+    <caption>upSplit 4 wave</caption>
 </figure>
 
 ---
 <figure style="text-align: center;">
     <img src="07rightSplits.png" width="560"><br>
-    <caption>手を振る人</caption>
+    <caption>rightSplit 4 wave</caption>
 </figure>
 
 ---
 <figure style="text-align: center;">
     <img src="08cornerSplits.png" width="560"><br>
-    <caption>手を振る人</caption>
+    <caption>cornerSplit 4 wave</caption>
 </figure>
 
 ---
 <figure style="text-align: center;">
     <img src="09SquareLimitWave.png" width="560"><br>
-    <caption>手を振る人</caption>
+    <caption>squareLimit 8 wave</caption>
 </figure>
 
 ---
@@ -63,19 +63,19 @@ theme: default
 ---
 <figure style="text-align: center;">
     <img src="11fish4.png" width="560"><br>
-    <caption>さかな</caption>
+    <caption>さかな4</caption>
 </figure>
 
 ---
 <figure style="text-align: center;">
     <img src="12fish3.png" width="560"><br>
-    <caption>さかな</caption>
+    <caption>さかな3</caption>
 </figure>
 
 ---
 <figure style="text-align: center;">
     <img src="13EscherSquareLimit.png" width="560"><br>
-    <caption>エッシャーのスクエアーリミット</caption>
+    <caption>エッシャーになれた</caption>
 </figure>
 
 
